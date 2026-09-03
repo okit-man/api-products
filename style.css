@@ -87,6 +87,7 @@ img {
     letter-spacing: 0.1rem;
     margin: 0.2rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
 }
 .price {
     font-weight: bolder;
@@ -129,6 +130,16 @@ img {
         width: 500px;
         height: 20rem;
     }
+    .product-name {
+        font-size: 0.95rem;
+        letter-spacing: 0.01rem;
+        color: grey;
+        margin-top: 1rem;
+    }
+    .price {
+        letter-spacing: 0.01rem;
+        color: gray;
+    }
     
 }
 
@@ -137,7 +148,13 @@ img {
         /* background-color: #c59d5f; */
     }
     img {
-        width: 420px;
+        width: 350px;
         height: 18rem;
+    }
+      .product-name {
+        font-size: 0.90rem;
+        letter-spacing: 0.01rem;
+        color: grey;
+        margin-bottom: 0.5rem;
     }
 }
