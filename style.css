@@ -7,6 +7,7 @@ body {
     /* background-color: red; */
     font-family: 'Poppins', sans-serif;
     height: 100%;
+    color: #222;
 }
 .products {
     /* align-items: center; */
@@ -126,6 +127,12 @@ img {
     height: 15rem;
 
 }
+.product-loading {
+    text-align: center;
+    font-size: 1.5rem;
+    /* margin-top: 1rem; */
+    color: #222;
+}
 .product-info {
     /* margin: 3rem 5rem; */
     margin: 3rem 2rem;
@@ -133,7 +140,6 @@ img {
 
 }
 .product-title, .company {
-    
     text-transform: capitalize;
     letter-spacing: 0.2rem;
     margin-bottom: 0.4rem;
@@ -177,6 +183,12 @@ img {
     margin: 1rem auto;
     padding: 5px 6px;
     border-radius: 5px; 
+}
+.product-error {
+    /* text-align: center; */
+    font-size: 1.5rem;
+    /* margin-top: 1rem; */
+    /* color: red; */
 }
 
 
