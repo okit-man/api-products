@@ -6,9 +6,12 @@ const url = "https://www.course-api.com/javascript-store-single-product";
 const fetchProduct = async () => {
     try {
         productDOM.innerHTML = `<h4 class="product-loading">loading...</h4>`;
-        // return "products"
-
+        
+        // the window.location.search property returns the query string part of a URL, including the question mark (?). 
+        // The query string is the part of a URL that contains data to be passed to web applications such as parameters and values. 
+        // It is typically used to send information to the server or to specify certain actions or filters for the requested resource.
         // console.log(window.location.search)
+
         // get the id from the api url
         const paramas = new  URLSearchParams(window.location.search);
         const id = paramas.get ("id");
@@ -36,22 +39,26 @@ const displayProduct = (product) => {
     } = product.fields;                       
     const {url: img} = image[0]
     document.title = title.toUpperCase();
-    // const priceFormat = price / 100;
+    const priceFormat = price / 100;
 
+    const colorList = colors.map((color) => {
+        return ` <span class="product-color" style="background-color: ${color};"></span>`;
+    })
     // .join('');
+    
 
     productDOM.innerHTML = `
           <div class="product-wrapper">
-            <img src="${img}" alt="" style="width: 550px; height: 22rem;">
+            <img src="${img}" alt="" ">
             <div class="product-info">
-                <h3 class="product-title">title</h3>
-                <h5 class="company">company</h5>
-                <span class="product-price">99</span>
+                <h3 class="product-title">${title}</h3>
+                <h5 class="company">${company}</h5>
+                <span class="product-price">$${priceFormat.toFixed(2)}</span>
                 <div class="color">
-                    <span class="product-color"></span>
-                    <span class="product-color" style="background-color: red;"></span>
+                    
+                    ${colorList.join("")}
                 </div>
-                <p class="productP">This is my day,courage is going from failure to failure without losing enthusiasm. do not go where path may lead but go where there is no path and leave a trail </p>
+                <p class="productP">${description} </p>
                 <button  class="btns">add to cart</button>
             </div>
       </div>
@@ -63,3 +70,6 @@ const start = async () => {
     displayProduct(datas)
 };
 start();
+
+
+// style="width: 500px; height: 25rem;
